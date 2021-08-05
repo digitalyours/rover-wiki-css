@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+
+/*Skinning*/
+
+/*Fonts einbinden - müssen über @import eingbunden worden sein*/
+body.mediawiki, body.mediawiki.x-body, #content #bodyContent , #firstHeading, #content #firstHeading {font-family: 'Lato',"arial",sans-serif;} /*Content and top menus*/
+.panel .list-group a.list-group-item span, .bs-panel .list-group a.list-group-item span,  #bs-globalactions a.list-group-item span {font-family: 'Lato',"arial",sans-serif;} /*Main navigation*/
+
+/*Custom menu*/
+
+.bs-custom-menu-header-container,.calumma-toggle-button.bs-custom-menu-header-button {background-color: #556064; background-image:linear-gradient( to bottom,#556064 0%,#556064 50%,#4e5355 100% );} /*background color*/
+.bs-custom-menu-header-container .bs-custom-menu.header a, .label  {color: #efefef;}  /*link color*/
+.calumma-toggle-button.bs-custom-menu-header-button i::before {color:#ffffff} /*arrow on toggle button*/
+
+
+/*Top bar*/
+
+body.mediawiki header.main-header {background-color: #fff;} /*background color*/
+   /* Creat#e7e7e7e and edit buttons */
+header .bs-featured-actions .dropdown .btn.btn-primary .icon::before{background-color: #9b9e9f;}  /*background*/
+header .bs-featured-actions .dropdown .btn.btn-primary:hover .icon::before {background-color: #891c1f;} /*hover background*/
+header .bs-featured-actions .dropdown .btn.dropdown-toggle::after {color: #9b9e9f;} /*arrow color*/
+header .bs-featured-actions .dropdown .btn.dropdown-toggle:hover::after {color: #891c1f;}  /*hover arrow color*/
+  /*Create and edit buttons drop-down menu*/
+header .bs-featured-actions .dropdown.open .dropdown-menu, header .bs-featured-actions .dropdown.open .dropdown-menu  {background-color: #891c1f;}  /*background color */
+header .bs-featured-actions .dropdown.open .dropdown-menu::before  {color: #891c1f;}  /*menu arrow color*/
+  /*full screen toggle*/
+.calumma-full-screen-button i::before,  .calumma-full-screen-button.bs-full-screen-mode i::before {color:#9b9e9f;} 
+
+/*Main navigation*/
+
+body.mediawiki .navigation-main {background-color:#cc1f2f;} /*background color*/
+  /* Tabs */
+.navigation-main .nav.nav-pills li a, .navigation-main .tab-pane.active .bs-calumma-sidebar-edit-link span   {color:#98a7c4;} /*color*/
+.navigation-main .nav.nav-pills li:hover a {color:#ffffff;} /*hover color*/
+.navigation-main .nav.nav-pills li.active a {color:#ffffff;} /*active color*/
+  /*Nav*/
+.navigation-main #bs-sitenavtabs div.tab-content a, .navigation-main #bs-sitenavtabs div.tab-content a:visited, .navigation-main #bs-sitenavtabs div.tab-content a:focus, .navigation-main .tab-pane.active .bs-calumma-sidebar-edit-link:hover span {color:#ffffff;} /*color menu headers*/
+.navigation-main a span,.navigation-main .panel .list-group a.list-group-item i, .navigation-main .bs-panel .list-group a.list-group-item i
+{background-color: transparent;color:#ffffff} /*color menu items and their icons*/
+
+/*Left and right  navigation toggles*/
+
+body .navigation-main .sidebar-toggle[data-toggle~="navigation-main-collapse"] i.navigation-main-collapse::before,body .sitetools-main .sidebar-toggle[data-toggle~="sitetools-main-collapse"] i.sitetools-main-collapse::before {color: #cacaca;}/*regular state */
+body .navigation-main .sidebar-toggle[data-toggle~="navigation-main-collapse"] i.navigation-main-collapse:hover::before,body .sitetools-main .sidebar-toggle[data-toggle~="sitetools-main-collapse"] i.sitetools-main-collapse:hover::before {color: #98a7c4;}/*regular state */
+
+/*Login link */
+
+.bs-button-user .bs-personal-not-loggedin, .bs-button-user .bs-personal-not-loggedin a:not(.new), .bs-button-user .bs-personal-not-loggedin a:link:not(.new) {color:#556064;}	
+
+/*Personal menu */
+ @media (min-width: 1001px){
+     .bs-button-user .bs-personal-menu-container {background-color: #891c1f;}  /*background color*/
+     .bs-button-user #bs-personal-menu .separator  {border-bottom:1.125rem solid #891c1f;} /*Personal menu separators */
+}
+
+/*Mobile header buttons*/
+
+@media (max-width: 720px){
+.mobile-notifications-button i.mobile-notifications-button::before, header.main-header .navbar a.mobile-search-button::before,.sidebar-toggle[data-toggle~="navigation-main-collapse"] i.navigation-main-collapse::before {color:#9b9e9f;} /*header bar buttons*/
+.mobile-notifications-button i.mobile-notifications-button:hover::before, header.main-header .navbar a.mobile-search-button:hover::before,.sidebar-toggle[data-toggle~="navigation-main-collapse"] i.navigation-main-collapse:hover::before {color:#556064
+;}/*header bar buttons hover*/
+.navigation-main a span, .navigation-main .panel .list-group a.list-group-item i, .navigation-main .bs-panel .list-group a.list-group-item i, .bs-mobile-user-button .bs-personal-menu a, .bs-mobile-user-button .bs-personal-menu li.bs-personal-menu-container-user span, .bs-mobile-user-button .bs-personal-menu li.bs-personal-menu-container-user span {
+    color: #040404;    font-size: 1.2em;} /*nav items color and size*/
+    .navigation-main #bs-sitenavtabs div.tab-content a, .navigation-main #bs-sitenavtabs div.tab-content a:visited, .navigation-main #bs-sitenavtabs div.tab-content a:focus, .navigation-main .tab-pane.active .bs-calumma-sidebar-edit-link:hover span {color:#040404; } /*nav headers*/
+.bs-mobile-user-button .bs-personal-menu-container, .navigation-main #bs-sitenavtabs div.tab-content {background-color:#f1f1f1;} /*Personal menu background*/
+.bs-mobile-user-button .bs-personal-menu .separator  {border-bottom:2px solid #e6e9f2;} /*Personal menu separators */
+}
